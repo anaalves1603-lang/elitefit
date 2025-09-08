@@ -8,22 +8,26 @@
 		<title>Elite Fit</title>
 
 <style>
-  .banner {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: #f0f0f0;
+  .banner-slideshow {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
   }
 
-  .banner img {
-    width: 30%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  .banner-slideshow .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
   }
-</style>
-<link rel="stylesheet" href="https://anaalves1603-lang.github.io/elitefit/wp-content/themes/hello-elementor/style.css"><meta name="robots" content="max-image-preview:large">
+
+  .banner-slideshow .slide.active {
+    opacity: 1;
+  }
+</style><link rel="stylesheet" href="https://anaalves1603-lang.github.io/elitefit/wp-content/themes/hello-elementor/style.css"><meta name="robots" content="max-image-preview:large">
 	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
 	<link rel="alternate" type="application/rss+xml" title="Feed para Elite Fit &raquo;" href="/feed/">
 <link rel="alternate" type="application/rss+xml" title="Feed de coment&aacute;rios para Elite Fit &raquo;" href="/comments/feed/">
@@ -204,10 +208,10 @@
 				</div>
 
 
-<div class="banner">
-  <img src="wp-content/uploads/2025/04/disc-fit-2.jpg" alt="Banner 1">
-  <img src="wp-content/uploads/2025/04/banner_fit1-2.jpg" alt="Banner 2">
-  <img src="wp-content/uploads/2025/04/alongamento-fit.jpg" alt="Banner 3">
+<div class="banner-slideshow">
+  <img src="wp-content/uploads/2025/04/disc-fit-2.jpg" class="slide active" alt="Banner 1">
+  <img src="wp-content/uploads/2025/04/banner_fit1-2.jpg" class="slide" alt="Banner 2">
+  <img src="wp-content/uploads/2025/04/alongamento-fit.jpg" class="slide" alt="Banner 3">
 </div>
 
 
