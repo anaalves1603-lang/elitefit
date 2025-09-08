@@ -634,6 +634,25 @@ var WprConfig = {"ajaxurl":"\/wp-admin\/admin-ajax.php","resturl":"\/wp-json\/wp
 <script data-cfasync="false" src="wp-content/plugins/royal-elementor-addons/assets/js/frontend.min.js?ver=1.7.1031" id="wpr-addons-js-js"></script>
 <script src="wp-content/plugins/royal-elementor-addons/assets/js/modal-popups.min.js?ver=1.7.1031" id="wpr-modal-popups-js-js"></script>
 
+<script>
+  const banner = document.querySelector('.banner-slideshow');
+  const imagens = [
+    'wp-content/uploads/2025/04/disc-fit-2.jpg',
+    'wp-content/uploads/2025/04/banner_fit1-2.jpg',
+    'wp-content/uploads/2025/04/alongamento-fit.jpg'
+  ];
+
+  let atual = 0;
+
+  function trocarImagem() {
+    banner.style.backgroundImage = `url('${imagens[atual]}')`;
+    atual = (atual + 1) % imagens.length;
+  }
+
+  trocarImagem(); // mostra a primeira
+  setInterval(trocarImagem, 5000); // troca a cada 5 segundos
+</script>
+
 </body>
 </html><!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
