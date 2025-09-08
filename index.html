@@ -12,10 +12,12 @@
       height: 500px;
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: background-image 1s ease-in-out;
+      box-sizing: border-box;
+      overflow: hidden;
     }
 
     .titulo-banner {
@@ -23,8 +25,10 @@
       font-size: 48px;
       font-weight: bold;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      margin: 0;
     }
   </style>
+
 
 <link rel="stylesheet" href="https://anaalves1603-lang.github.io/elitefit/wp-content/themes/hello-elementor/style.css"><meta name="robots" content="max-image-preview:large">
 	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
@@ -212,8 +216,15 @@
  
 
 <div class="banner-slideshow">
-  <h2 class="titulo-banner">DESAFIE SEUS</h2>
-</div>
+    <h2 class="titulo-banner">DESAFIE SEUS LIMITES</h2>
+  </div>
+
+  <!-- Conteúdo do site continua aqui -->
+  <div class="conteudo">
+    <p>Bem-vinda ao Elite Fit!</p>
+    <!-- mais conteúdo -->
+  </div>
+
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-cc6a574 elementor-widget elementor-widget-heading" data-id="cc6a574" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -634,24 +645,25 @@ var WprConfig = {"ajaxurl":"\/wp-admin\/admin-ajax.php","resturl":"\/wp-json\/wp
 <script data-cfasync="false" src="wp-content/plugins/royal-elementor-addons/assets/js/frontend.min.js?ver=1.7.1031" id="wpr-addons-js-js"></script>
 <script src="wp-content/plugins/royal-elementor-addons/assets/js/modal-popups.min.js?ver=1.7.1031" id="wpr-modal-popups-js-js"></script>
 
-<script>
-  const banner = document.querySelector('.banner-slideshow');
-  const imagens = [
-    'wp-content/uploads/2025/04/disc-fit-2.jpg',
-    'wp-content/uploads/2025/04/banner_fit1-2.jpg',
-    'wp-content/uploads/2025/04/alongamento-fit.jpg'
-  ];
+ <script>
+    const banner = document.querySelector('.banner-slideshow');
+    const imagens = [
+      'wp-content/uploads/2025/04/disc-fit-2.jpg',
+      'wp-content/uploads/2025/04/banner_fit1-2.jpg',
+      'wp-content/uploads/2025/04/alongamento-fit.jpg'
+    ];
 
-  let atual = 0;
+    let atual = 0;
 
-  function trocarImagem() {
-    banner.style.backgroundImage = `url('${imagens[atual]}')`;
-    atual = (atual + 1) % imagens.length;
-  }
+    function trocarImagem() {
+      banner.style.backgroundImage = `url('${imagens[atual]}')`;
+      atual = (atual + 1) % imagens.length;
+    }
 
-  trocarImagem(); // mostra a primeira
-  setInterval(trocarImagem, 5000); // troca a cada 5 segundos
-</script>
+    trocarImagem(); // mostra a primeira
+    setInterval(trocarImagem, 5000); // troca a cada 5 segundos
+  </script>
+
 
 </body>
 </html><!--
