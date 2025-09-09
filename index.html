@@ -7,40 +7,55 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 		<title>Elite Fit</title>
  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    body {
-      font-family: sans-serif;
-    }
+  body {
+    font-family: sans-serif;
+  }
 
-    .banner-slideshow {
-      width: 100%;
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-image 1s ease-in-out;
-    }
+  .banner-slideshow {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* ADICIONADO para permitir posicionamento interno */
+    transition: background-image 1s ease-in-out;
+  }
 
-    .titulo-banner {
-      color: white;
-      font-size: 48px;
-      font-weight: bold;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    }
+  .titulo-banner {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    position: absolute; /* ADICIONADO para posicionar sobre o banner */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+  }
 
-    .conteudo {
-      padding: 40px;
-      text-align: center;
-    }
-  </style>
+  .conteudo {
+    padding: 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
 
 
 
